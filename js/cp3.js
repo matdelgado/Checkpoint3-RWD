@@ -37,12 +37,13 @@ inputEmail.addEventListener("keyup", ()=>{
 
     const lblEmail = document.querySelector("label[for='idEmail']");
 
-    if (inputEmail.value.length < 5){
+    if (inputEmail.value.length < 5 || JSON.stringify(inputEmail.value).includes("@") == false){
         inputEmail.setAttribute("style", "outline-color:#ff0000;");
         lblEmail.setAttribute("style", "color:#ff0000;");
     } else {
         inputEmail.setAttribute("style", "outline-color:#00ff00;");
         lblEmail.setAttribute("style", "color:#00ff00;");
+
     }
 
 });
@@ -53,7 +54,7 @@ inputPass.addEventListener("keyup", ()=>{
 
     const lblPass = document.querySelector("label[for='idPass']");
 
-    if (inputPass.value.length < 5){
+    if (inputPass.value.length < 5 || inputPass.value.length > 8){
         inputPass.setAttribute("style", "outline-color:#ff0000;");
         lblPass.setAttribute("style", "color:#ff0000;");
     } else {
@@ -79,4 +80,27 @@ inputConf.addEventListener("keyup", ()=>{
     }
 
 
+});
+
+const inputSubmit = document.querySelector("#btnSubmit");
+
+inputSubmit.addEventListener("click", ()=>{
+
+    if(inputFirstName.value.length < 5){
+        alert("O primeiro nome precisa ter no minímo 5 caracteres.")
+    }
+    if(inputLastName.value.length < 5){
+        alert("O segundo nome precisa ter no minímo 5 caracteres.")
+    }
+    if(inputEmail.value.length < 5){
+        alert("o e-mail precisa ter no minímo 5 caracteres e um @");
+    } else if (JSON.stringify(inputEmail.value).includes("@") == false) {
+        alert("o e-mail precisa ter um @")
+    }
+    if(inputPass.value.length < 6 || inputPass.value.length > 8){
+        alert("A senha precisa ter no minímo 6 caracteres e no máximo 8.")
+    }
+    if(inputConf.value != inputPass.value) {
+        alert("As senhas são diferentes, por favor, verificar.")
+    }
 });
