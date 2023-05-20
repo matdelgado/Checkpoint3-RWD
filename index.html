@@ -12,32 +12,31 @@
     <div>
         <h1>CADASTRO DE USUÁRIO</h1>
         <p>Complete suas informações</p>
-        <br>
     </div>
-
     <forms>
         <fieldset>
             <div>
-                <label>Primeiro nome</label>
-                <input type="text" name="nome" id="nome">
+                <label for="idFirstName">Primeiro nome</label>
+                <input type="text" name="txtFirstName" id="idFirstName">
             </div>
-
             <div>
-                <label>Segundo nome</label>
-                <input type="text" name="sobrenome" id="sobrenome">
+                <label for="idLastName">Segundo nome</label>
+                <input type="text" name="txtLastName" id="idLastName">
             </div>
-        </fieldset>
-
-        <fieldset>
             <div>
-                <label>Email</label>
-                <input type="email" name="email" id="email">
+                <label for="idEmail">Email</label>
+                <input type="email" name="txtEmail" id="idEmail">
             </div>
-
-
             <div>
-                <label for="isenha">Senha</label>
-                <input type="password" name="senha" id="isenha">
+                <label for="idPass">Senha</label>
+                <input type="password" name="txtPass" id="idPass" placeholder="Senha">
+            </div>
+            <div>
+                <label for="idConfPass">Confirmação de Senha</label>
+                <input type="password" name="txtConfPass" id="idConfPass" placeholder="Confirmacao Senha">
+            </div>
+            <div>
+                <button type="submit" id="btnSubmit">Entrar</button>
             </div>
         </fieldset>
     </forms>
