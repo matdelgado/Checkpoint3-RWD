@@ -109,7 +109,7 @@ const btnDarkMode = document.querySelector("#btnDarkMode");
 
 
 btnDarkMode.addEventListener("click", () => {
-    let botao = document.querySelector("body");
+    let body = document.querySelector("body");
     let container = document.querySelector(".container");
     let inputs = document.querySelectorAll("input");
     let btnSubmit = document.querySelector("#btnSubmit");
@@ -119,7 +119,7 @@ btnDarkMode.addEventListener("click", () => {
     for (var i = 0; i < caracteres.length; i++) {
         caracteres[i].setAttribute("style", `color:#fff;`);
     }
-    botao.setAttribute("style", `background-color:#000;`);
+    body.setAttribute("style", `background-color:#000;`);
     container.setAttribute("style", `background:rgb(77, 77, 77)`);
     btnSubmit.setAttribute("style", `background:rgb(44, 44, 44)`);
     btnDarkMode.setAttribute("style", `background:rgb(44, 44, 44)`);
