@@ -1,10 +1,10 @@
 const inputFirstName = document.querySelector("#idFirstName");
 
-inputFirstName.addEventListener("keyup", () => {
+inputFirstName.addEventListener("keyup", ()=>{
 
     const lblFirstName = document.querySelector("label[for='idFirstName']");
 
-    if (inputFirstName.value.length < 5) {
+    if (inputFirstName.value.length < 5){
         inputFirstName.setAttribute("style", "outline-color:#ff0000;");
         lblFirstName.setAttribute("style", "color:#ff0000;");
     } else {
@@ -16,11 +16,11 @@ inputFirstName.addEventListener("keyup", () => {
 
 const inputLastName = document.querySelector("#idLastName");
 
-inputLastName.addEventListener("keyup", () => {
+inputLastName.addEventListener("keyup", ()=>{
 
     const lblLastName = document.querySelector("label[for='idLastName']");
 
-    if (inputLastName.value.length < 5) {
+    if (inputLastName.value.length < 5){
         inputLastName.setAttribute("style", "outline-color:#ff0000;");
         lblLastName.setAttribute("style", "color:#ff0000;");
     } else {
@@ -33,11 +33,11 @@ inputLastName.addEventListener("keyup", () => {
 const inputEmail = document.querySelector("#idEmail");
 
 
-inputEmail.addEventListener("keyup", () => {
+inputEmail.addEventListener("keyup", ()=>{
 
     const lblEmail = document.querySelector("label[for='idEmail']");
 
-    if (inputEmail.value.length < 5 || JSON.stringify(inputEmail.value).includes("@") == false) {
+    if (inputEmail.value.length < 5 || JSON.stringify(inputEmail.value).includes("@") == false){
         inputEmail.setAttribute("style", "outline-color:#ff0000;");
         lblEmail.setAttribute("style", "color:#ff0000;");
     } else {
@@ -50,11 +50,11 @@ inputEmail.addEventListener("keyup", () => {
 
 const inputPass = document.querySelector("#idPass");
 
-inputPass.addEventListener("keyup", () => {
+inputPass.addEventListener("keyup", ()=>{
 
     const lblPass = document.querySelector("label[for='idPass']");
 
-    if (inputPass.value.length < 5 || inputPass.value.length > 8) {
+    if (inputPass.value.length < 5 || inputPass.value.length > 8){
         inputPass.setAttribute("style", "outline-color:#ff0000;");
         lblPass.setAttribute("style", "color:#ff0000;");
     } else {
@@ -67,11 +67,11 @@ inputPass.addEventListener("keyup", () => {
 
 const inputConf = document.querySelector("#idConfPass");
 
-inputConf.addEventListener("keyup", () => {
+inputConf.addEventListener("keyup", ()=>{
 
     const lblConf = document.querySelector("label[for='idConfPass']");
 
-    if (inputConf.value != inputPass.value) {
+    if (inputConf.value != inputPass.value){
         inputConf.setAttribute("style", "outline-color:#ff0000;");
         lblConf.setAttribute("style", "color:#ff0000;");
     } else {
@@ -84,23 +84,23 @@ inputConf.addEventListener("keyup", () => {
 
 const inputSubmit = document.querySelector("#btnSubmit");
 
-inputSubmit.addEventListener("click", () => {
+inputSubmit.addEventListener("click", ()=>{
 
-    if (inputFirstName.value.length < 5) {
+    if(inputFirstName.value.length < 5){
         alert("O primeiro nome precisa ter no minímo 5 caracteres.")
     }
-    if (inputLastName.value.length < 5) {
+    if(inputLastName.value.length < 5){
         alert("O segundo nome precisa ter no minímo 5 caracteres.")
     }
-    if (inputEmail.value.length < 5) {
+    if(inputEmail.value.length < 5){
         alert("o e-mail precisa ter no minímo 5 caracteres e um @");
     } else if (JSON.stringify(inputEmail.value).includes("@") == false) {
         alert("o e-mail precisa ter um @")
     }
-    if (inputPass.value.length < 6 || inputPass.value.length > 8) {
+    if(inputPass.value.length < 6 || inputPass.value.length > 8){
         alert("A senha precisa ter no minímo 6 caracteres e no máximo 8.")
     }
-    if (inputConf.value != inputPass.value) {
+    if(inputConf.value != inputPass.value) {
         alert("As senhas são diferentes, por favor, verificar.")
     }
 });
@@ -108,20 +108,12 @@ inputSubmit.addEventListener("click", () => {
 const btnDarkMode = document.querySelector("#btnDarkMode");
 
 
-btnDarkMode.addEventListener("click", () => {
-    let body = document.querySelector("body");
-    let container = document.querySelector(".container");
-    let inputs = document.querySelectorAll("input");
-    let btnSubmit = document.querySelector("#btnSubmit");
-    let btnDarkMode = document.querySelector("#btnDarkMode");
+btnDarkMode.addEventListener("click", ()=>{
+    let botao = document.querySelector("body");
     let caracteres = document.querySelectorAll("div");
-
-    for (var i = 0; i < caracteres.length; i++) {
+    botao.setAttribute("style", `background-color:#000;`);
+    for(var i = 0; i < caracteres.length; i++){
         caracteres[i].setAttribute("style", `color:#fff;`);
     }
-    body.setAttribute("style", `background-color:#000;`);
-    container.setAttribute("style", `background:rgb(77, 77, 77)`);
-    btnSubmit.setAttribute("style", `background:rgb(44, 44, 44)`);
-    btnDarkMode.setAttribute("style", `background:rgb(44, 44, 44)`);
-
+    
 });
