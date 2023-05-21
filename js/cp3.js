@@ -110,8 +110,10 @@ const btnDarkMode = document.querySelector("#btnDarkMode");
 
 btnDarkMode.addEventListener("click", ()=>{
     let botao = document.querySelector("body");
-    botao.setAttribute("style", `background-color:black;`);
+    let caracteres = document.querySelectorAll("div");
+    botao.setAttribute("style", `background-color:#000;`);
+    for(var i = 0; i < caracteres.length; i++){
+        caracteres[i].setAttribute("style", `color:#fff;`);
+    }
     
 });
-
-
