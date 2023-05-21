@@ -12,3 +12,22 @@ body {
   height: 100vh;
   font-family: sans-serif;
 }
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  background: #FFF;
+  padding: 40px;
+  border-radius: 20px;
+  position: relative;
+}
+
+button {
+  background: #4d3278;
+  padding: 8px;
+  border: 0;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
