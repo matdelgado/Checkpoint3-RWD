@@ -104,3 +104,16 @@ inputSubmit.addEventListener("click", ()=>{
         alert("As senhas são diferentes, por favor, verificar.")
     }
 });
+
+const btnDarkMode = document.querySelector("#btnDarkMode");
+
+
+btnDarkMode.addEventListener("click", ()=>{
+    let botao = document.querySelector("body");
+    let caracteres = document.querySelectorAll("div");
+    botao.setAttribute("style", `background-color:#000;`);
+    for(var i = 0; i < caracteres.length; i++){
+        caracteres[i].setAttribute("style", `color:#fff;`);
+    }
+    
+});
